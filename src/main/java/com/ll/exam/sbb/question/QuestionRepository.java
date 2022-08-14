@@ -1,5 +1,6 @@
-package com.ll.exam.sbb;
+package com.ll.exam.sbb.question;
 
+import com.ll.exam.sbb.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -7,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import javax.transaction.Transactional;
 import java.util.List;
 
-public interface QuestionRepository extends JpaRepository<Question, Integer>,Repository {//Integer는 주 키 타입
+public interface QuestionRepository extends JpaRepository<Question, Integer>, Repository {//Integer는 주 키 타입
 
     Question findBySubject(String subject);
 
